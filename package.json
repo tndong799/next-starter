@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "build": "npx @cloudflare/next-on-pages",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev",
     "deploy": "npm run pages:build && wrangler pages deploy",
@@ -16,11 +17,10 @@
     "autoprefixer": "10.4.19",
     "bcrypt": "^5.1.1",
     "clsx": "^2.1.1",
-    "next": "15.0.0-canary.56",
-    "next-auth": "5.0.0-beta.19",
+    "next": "14.2.14",
     "postcss": "8.4.38",
-    "react": "19.0.0-rc-f38c22b244-20240704",
-    "react-dom": "19.0.0-rc-f38c22b244-20240704",
+    "react": "^18",
+    "react-dom": "^18",
     "tailwindcss": "3.4.4",
     "typescript": "5.5.2",
     "use-debounce": "^10.0.1",
@@ -30,8 +30,8 @@
     "@cloudflare/next-on-pages": "^1.13.5",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "20.14.8",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0"
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
   },
   "engines": {
     "node": ">=20.12.0"
