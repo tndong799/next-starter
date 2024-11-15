@@ -42,7 +42,9 @@ export function Analytics({
 
     return (
         <GTMProvider state={{ id: GTM_ID }}>
-            <PageViewTracker>{children}</PageViewTracker>
+            <React.Suspense>
+                <PageViewTracker>{children}</PageViewTracker>
+            </React.Suspense>
         </GTMProvider>
     );
 }
