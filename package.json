@@ -1,7 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
+    "vercel-deploy": "next build",
     "dev": "next dev -p 8387",
     "start": "next start"
   },
@@ -24,6 +27,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.5",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "20.14.8",
     "@types/react": "18.3.3",
