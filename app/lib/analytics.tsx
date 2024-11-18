@@ -4,7 +4,7 @@ import * as React from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { GTMProvider, useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
-const GTM_ID = 'GTM-T5MWPFX4';
+const GTM_ID = 'GTM-5MM6CP4J';
 
 export interface PageViewTrackerProps {
     children: React.ReactNode;
