@@ -4,6 +4,7 @@ import useDeviceResponsive from '../hooks/useDevice';
 import HeaderDesktop from './header';
 import HeaderMobile from './header-mobile';
 import BacktoTop from './back-to-top';
+import MadeWithLove from './mwl';
 
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
     const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
             <div>{isMobile ? <HeaderMobile /> : <HeaderDesktop />}</div>
             {children}
             <BacktoTop />
+            <MadeWithLove />
         </div>
     );
 };
