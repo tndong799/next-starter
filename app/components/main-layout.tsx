@@ -3,6 +3,7 @@ import { useState } from 'react';
 import useDeviceResponsive from '../hooks/useDevice';
 import HeaderDesktop from './header';
 import HeaderMobile from './header-mobile';
+import BacktoTop from './back-to-top';
 
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
     const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
             import HeaderMobile from './header-mobile';
             <div>{isMobile ? <HeaderMobile /> : <HeaderDesktop />}</div>
             {children}
+            <BacktoTop />
         </div>
     );
 };
