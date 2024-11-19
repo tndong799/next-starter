@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import useDeviceResponsive from '../hooks/useDevice';
+import HeaderDesktop from './header';
+import HeaderMobile from './header-mobile';
 
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
     const [count, setCount] = useState(0);
@@ -9,7 +11,8 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
         <div>
             <button onClick={() => setCount(count + 1)}>Click </button>
             <div>{count}</div>
-            <div>{isMobile ? 'Mobile' : 'Desktop'}</div>
+            import HeaderMobile from './header-mobile';
+            <div>{isMobile ? <HeaderMobile /> : <HeaderDesktop />}</div>
             {children}
         </div>
     );
